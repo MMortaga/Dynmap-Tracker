@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { track } from './controllers/track';
-import { homepage } from './controllers/homepage';
+import { homepage, js } from './controllers/homepage';
 import { audio } from './controllers/audio';
 
 const app = express();
@@ -11,6 +11,7 @@ const port = process.env.PORT || 8080;
 
 app.get('/track', track);
 app.get('/audio.wav', audio);
+app.get('/index.js', js);
 app.get('/', homepage);
 
 app.listen( port, () => {

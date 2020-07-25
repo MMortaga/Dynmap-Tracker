@@ -7,7 +7,7 @@
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "cp src/controllers/index.html dist/controllers/ && cp src/controllers/audio.wav dist/controllers/ && node .",
+    "start": "cp -r src/controllers/static dist/controllers/ && node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
